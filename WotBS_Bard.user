@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document signature="Hero Lab Data">
+  <thing id="wotbsBrdCoCq" name="College of Cirquelistes (WotBS PG)" description="While anyone able to teleport and having a penchant for performance can join the Wayfarers, the most respected members are the highly-trained cirquelistes. These agile, typically flamboyant performers are masters of teleportation magic. An aspiring Wayfarer must complete an audition, and any character accepted into the Wayfarers must swear an oath.\nThose who need to get somewhere quickly know they can trust the Wayfarers to provide teleportation services. Wayfarer cirquelistes are required to pay monthly fees to the guild for each teleportation spell they provide except when their lives or the lives of their allies are at stake. The fee is 20 gp per use of dimension door and 300 gp per use of teleport or other long distance spell. In exchange, the Cirque offers its members protection and rescue in times of trouble and can practically ensure business." compset="CustomSpec" summary="You have been trained in the traditions of the Wayfarers" uniqueness="unique">
+    <usesource source="WotBS" parent="UserParent" name="War of the Burning Sky"/>
+    <usesource source="UserParent"/>
+    <tag group="Helper" tag="SpecUp"/>
+    <tag group="SpecSource" tag="cHelpBrd"/>
+    <tag group="Helper" tag="Primary"/>
+    <tag group="abCategory" tag="BrdCollege"/>
+    <bootstrap thing="wotbsBrdWayStep">
+      <autotag group="ClSpecWhen" tag="3"/>
+      </bootstrap>
+    <bootstrap thing="wotbsBrdExtPass">
+      <autotag group="ClSpecWhen" tag="3"/>
+      </bootstrap>
+    <bootstrap thing="wotbsBrdSenseTele">
+      <autotag group="ClSpecWhen" tag="3"/>
+      </bootstrap>
+    </thing>
+  <thing id="wotbsBrdWayStep" name="Wayfarers Step" description="When you join the College of Cirquelistes at 3rd level, you begin to learn the secrets of the Wayfarers. You can innately cast misty step without using a spell slot, and it does not count against your spells known. If dimension door is one of your spells known, you can expend one use of your Bardic Inspiration to cast dimension door as a bonus action without using a spell slot. If teleport is one of your spells known, you can expend one use of your Bardic Inspiration to cast teleport as a ritual." compset="ClSpecial" summary="Can cast Misty Step, Dimension Door, or Teleport">
+    <fieldval field="shortname" value="Wayfarers Step"/>
+    <usesource source="WotBS" parent="UserParent" name="War of the Burning Sky"/>
+    </thing>
+  <thing id="wotbsBrdExtPass" name="Extra Passengers" description="Extra Passengers\nAt 3rd level, You can take additional creatures with you whenever you use misty step, dimension door, or teleport. For each use of Bardic Inspiration you expend, you can bring along one additional creature of your size or smaller." compset="ClSpecial" summary="Can cast Misty Step, Dimension Door, or Teleport">
+    <usesource source="WotBS" parent="UserParent" name="War of the Burning Sky"/>
+    </thing>
+  <thing id="wotbsBrdSenseTele" name="Sense Teleportation" description="Starting at 3rd level, you can sense recent teleportation. If you come within 60 feet of a location where teleportation either arrived or departed within the last ten minutes, you are immediately aware of it. By using your action and concentrating for one round you can locate the exact location the spell occurred, and by continuing to concentrate for a second round you know whether the subjects were arriving or departing. Finally, by concentrating for a third consecutive round you can sense the area the subjects departed from or arrived at, getting enough information about the area to teleport there as if the area were “seen casually.” If you do not follow the teleportation within ten minutes, you lose this sense of that area, and treat that area as “description” (unless you have, in fact, seen it before)." compset="ClSpecial" summary="Sense Teleportation within the past 10 minutes">
+    <usesource source="WotBS" parent="UserParent" name="War of the Burning Sky"/>
+    </thing>
+  <thing id="wotbsSpCancel" name="Cancel" description="You form a sphere of antimagic in your hand. When you see a creature within 60 feet cast or concentrate on a spell, you release the sphere at them in an attempt to interrupt the spell. If the spell is of 2nd level or lower, its spell fails and has no effect. If the spell is of 3rd level or higher, make an ability check using your spellcasting ability. The DC equals 10 + the spell’s level. On a success, the creature’s spell fails and has no effect.\n\nSince this spell takes an action to cast, you must use it on a spellcaster who is concentrating on a spell or use the Ready action, anticipating that a creature in range will cast a spell or a creature already concentrating on a spell will come in range. You then release the readied spell using your reaction. You may continue to concentrate on this spell or for longer than 1 round until released at a target or dismissed.\n\nAt Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, the interrupted spell has no effect if its level is less than or equal to the level of the spell slot you used." compset="Spell">
+    <fieldval field="sRange" value="60&apos;"/>
+    <fieldval field="sDuration" value="Instantaneous"/>
+    <tag group="sCastTime" tag="Action1"/>
+    <tag group="sSchool" tag="Abjur"/>
+    <tag group="sComp" tag="V"/>
+    <tag group="sComp" tag="S"/>
+    <tag group="sClass" tag="cHelpWiz"/>
+    <tag group="sLevel" tag="2"/>
+    <tag group="sClass" tag="r5CVGMBard"/>
+    <tag group="sClass" tag="cHelpBrd"/>
+    <tag group="sClass" tag="cHelpClr"/>
+    <tag group="sClass" tag="rDruid"/>
+    <tag group="sClass" tag="cHelpDrd"/>
+    <tag group="sClass" tag="cHelpPal"/>
+    <tag group="sClass" tag="cHelpSor"/>
+    <tag group="sClass" tag="cHelpRgr"/>
+    <tag group="sClass" tag="cHelpRgC"/>
+    </thing>
+  <thing id="wotbsStandHeat" name="Stand The Heat" description="You touch a willing creature, and the creature and all equipment it carries suffer no harm from being in extreme heat. It can exist comfortably in temperatures as high as 500 degrees Fahrenheit. This protection is sufficient to endure the oven-like heat of a forest fire, though neither the creature nor its equipment is protected against fire damage.\n\nIf the affected creature catches fire, it can put the flames out with a bonus action.\n\nAt Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, you can affect one additional creature for each slot level above 1st. The creatures must be touching you or another of the affected creatures." compset="Spell">
+    <fieldval field="sCompDesc" value="(ten gold coins which have sat in a fire for at least one hour)"/>
+    <fieldval field="sRange" value="Touch"/>
+    <fieldval field="sDuration" value="24 hours"/>
+    <tag group="sCastTime" tag="Action1"/>
+    <tag group="sClass" tag="r5CVGMBard"/>
+    <tag group="sClass" tag="cHelpBrd"/>
+    <tag group="sClass" tag="cHelpClr"/>
+    <tag group="sClass" tag="rDruid"/>
+    <tag group="sClass" tag="cHelpDrd"/>
+    <tag group="sClass" tag="cHelpPal"/>
+    <tag group="sClass" tag="cHelpRgr"/>
+    <tag group="sClass" tag="cHelpRgC"/>
+    <tag group="sClass" tag="cHelpSor"/>
+    <tag group="sClass" tag="cHelpWlk"/>
+    <tag group="sComp" tag="V"/>
+    <tag group="sComp" tag="S"/>
+    <tag group="sComp" tag="M"/>
+    <tag group="sSchool" tag="Divination"/>
+    <tag group="sClass" tag="cHelpWiz"/>
+    <tag group="sLevel" tag="1"/>
+    </thing>
+  </document>
